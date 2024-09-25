@@ -1,0 +1,23 @@
+openapi: 3.0.3
+info:
+  title: 'test'
+  description: 'Test'
+  version: 1.0.0
+servers: []
+paths:
+  '/test':
+    get:
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DTO'
+components:
+  schemas:
+    DTO:
+      properties:
+        mycontent:
+          type: string
+          format: byte
